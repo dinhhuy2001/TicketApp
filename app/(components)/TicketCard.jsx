@@ -24,15 +24,14 @@ const TicketCard = ({ ticket }) => {
     const createdDateTime = formatTimestamp(ticket.createdAt);
 
     return (
-        <Link href={`/TicketPage/${ticket._id}`} style={{ display: 'contents' }}>
-            <div className="flex flex-col hover:bg-card-hover bg-card rounded-md shadow-lg p-3 m-2">
-                <div className="flex mb-3">
-                    <PriorityDisplay priority={ticket.priority} />
-                    <div className="ml-auto">
-                        <DeleteBlock id={ticket._id} />
-                    </div>
+        <div className="flex flex-col hover:bg-card-hover bg-card rounded-md shadow-lg p-3 m-2">
+            <div className="flex mb-3">
+                <PriorityDisplay priority={ticket.priority} />
+                <div className="ml-auto">
+                    <DeleteBlock id={ticket._id} />
                 </div>
-
+            </div>
+            <Link href={`/TicketPage/${ticket._id}`} style={{ display: 'contents' }}>
                 <h4 className="mb-1">{ticket.title}</h4>
                 <hr className="h-px  border-0 bg-page mb-2 "></hr>
                 <p className="whitespace-pre-wrap">{ticket.description}</p>
@@ -47,8 +46,8 @@ const TicketCard = ({ ticket }) => {
                         <StatusDisplay status={ticket.status} />
                     </div>
                 </div>
-            </div>
-        </Link>
+            </Link>
+        </div>
     );
 };
 

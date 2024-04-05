@@ -3,7 +3,7 @@ import TicketCard from './(components)/TicketCard';
 
 const getTickets = async () => {
     try {
-        const res = await fetch('https://ticketjiraapp.netlify.app/api/Tickets', {
+        const res = await fetch('https://ticketjira.vercel.app/api/Tickets', {
             cache: 'no-store',
         });
 
