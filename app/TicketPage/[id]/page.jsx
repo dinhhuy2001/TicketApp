@@ -2,7 +2,7 @@ import EditTicketForm from '@/app/(components)/EditTicketForm';
 
 const getTicketById = async (id) => {
     try {
-        const res = await fetch(`https://ticketjiraapp.netlify.app//api/Tickets/${id}`, {
+        const res = await fetch(`https://ticketjiraapp.netlify.app/api/Tickets/${id}`, {
             cache: 'no-store',
         });
 
